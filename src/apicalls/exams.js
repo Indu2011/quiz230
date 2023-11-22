@@ -4,7 +4,7 @@ const { default: axiosInstance } = require(".");
 
 export const addExam = async (payload) => {
     try {
-        const response = await axiosInstance.post("/api/exams/add", payload);
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/add", payload);
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -14,7 +14,7 @@ export const addExam = async (payload) => {
 // get all exams
 export const getAllExams = async () => {
     try {
-        const response = await axiosInstance.post("/api/exams/get-all-exams");
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/get-all-exams");
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -25,7 +25,7 @@ export const getAllExams = async () => {
 
 export const getExamById = async (payload) => {
     try {
-        const response = await axiosInstance.post("/api/exams/get-exam-by-id", payload
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/get-exam-by-id", payload
         );
         return response.data;
     } catch (error) {
@@ -37,7 +37,7 @@ export const getExamById = async (payload) => {
 
 export const editExamById = async (payload) => {
     try {
-        const response = await axiosInstance.post("/api/exams/edit-exam-by-id", payload);
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/edit-exam-by-id", payload);
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -48,7 +48,7 @@ export const editExamById = async (payload) => {
 
 export const deleteExamById = async (payload) => {
     try {
-        const response = await axiosInstance.post("/api/exams/delete-exam-by-id", payload);
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/delete-exam-by-id", payload);
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -59,7 +59,7 @@ export const deleteExamById = async (payload) => {
 
 export const addQuestionToExam = async (payload) => {
     try {
-        const response = await axiosInstance.post("/api/exams/add-question-to-exam", payload);
+        const response = await axiosInstance.post("https://mern-quiz2.onrender.com/api/exams/add-question-to-exam", payload);
         return response.data;
     } catch (error) {
         return error.response.data;
@@ -71,7 +71,7 @@ export const addQuestionToExam = async (payload) => {
 export const editQuestionById = async (payload) => {
     try {
         const response = await axiosInstance.post(
-            "/api/exams/edit-question-in-exam",
+            "https://mern-quiz2.onrender.com/api/exams/edit-question-in-exam",
             payload
         );
         return response.data;
@@ -85,7 +85,7 @@ export const editQuestionById = async (payload) => {
 export const deleteQuestionById = async (payload) => {
     try {
         const response = await axiosInstance.post(
-            "/api/exams/delete-question-in-exam",
+            "https://mern-quiz2.onrender.com/api/exams/delete-question-in-exam",
             payload
         );
         return response.data;
